@@ -464,6 +464,14 @@
         FROM country AS co
         ORDER BY co.SurfaceArea DESC;
 
+        - select ~ distinct ~ from 
+    - 중복제거
+    - (*)키워드
+        - distinct 컬럼명|함수|...
+    - 집계
+        - 통계를 위해서 데이터를 뭉치는 과정에 중복이 제거되는 것뿐
+        - 성격이 다름
+
 
 
 
