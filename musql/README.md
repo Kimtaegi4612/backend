@@ -472,6 +472,36 @@
         - 통계를 위해서 데이터를 뭉치는 과정에 중복이 제거되는 것뿐
         - 성격이 다름
 
+            ```
+        -- 중복 데이터 제거
+        -- city 테이블 대상
+        -- 국가코드의 중복 제거하여, 유니크한 국가코드 결과셋을 구하시오
+        -- 유니크한 국가코드만 출력!!
+        SELECT DISTINCT city.CountryCode
+        FROM city;
+        -- 232개 코드 결과셋
+    ```
+
+    - LIMIT
+    - 결과셋의 개수를 제한
+    - 형식
+        - limit n    : 처음(상위)부터 n개 까지만 대상 제한
+        - limit n, m : n ~ m까지 대상 제한
+    - 게시판의 페이징과 연관을 맷음, 필요한 만큼만 가져온다 => 성능에 영향향
+    ```
+        -- country 테이블에서
+        -- 국가 면적 순으로 정렬 (내림차순) 결과물에서
+        -- 상위 10(탑 10)개만 출력
+        -- 국가명, 면적만 출력하시오
+        SELECT co.`Name`, co.SurfaceArea
+        FROM country AS co
+        ORDER BY co.SurfaceArea desc
+        LIMIT 10;
+        -- (10, 2)
+
+
+
+
 
 
 
