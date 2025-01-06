@@ -244,3 +244,41 @@
             FROM city
             WHERE Population <> 5598953;
             -- 전체는 4,079개, 조건부여 4,078개  
+
+             -- city 테이블에서
+            -- 국가코드(CountryCode)가 KOR 혹은(OR) USA인 데이터를
+            -- 모두 가져오시오
+            SELECT *
+            FROM city
+            WHERE city.CountryCode='KOR' OR CountryCode='USA';
+
+            -- 한국의 도시들중 AND 인구수가 백만이상인 도시 데이터만
+            -- 모두 조회하시오
+            SELECT *
+            FROM city
+            WHERE city.CountryCode='KOR' AND city.Population>=1000000;
+            -- 0.016초
+
+            SELECT *
+            FROM city
+            WHERE city.Population>=1000000 AND city.CountryCode='KOR';
+            -- 0.000초
+
+            -- 조건식의 배치 순서에 따라 처리 속도가 다름!!
+            
+            - SELECT ~ FROM ~ WHERE ~ BETWEEN
+    - 조건식에 BETWEEN를 사용
+    - 조건을 부여하는 컬럼의 데이터 타입이 수치형(or 연속형)일때 사용가능
+        - 값과 값사이가 무한대 : 통상 연속형의 특징을 가짐
+        - 컬럼명 BETWEEN a AND b
+            - a <= 컬럼값 <= b
+        ```
+            -- city 테이블에서
+            -- 모든데이터를 가져온다
+            -- 단, 인구수가 5백만이상, 6백만 이하인 도시만 해당된다
+            -- 5000000 <= 인구수 <= 6000000
+            SELECT *
+            FROM city
+            WHERE city.Population BETWEEN 5000000 AND 6000000;
+        ```
+
