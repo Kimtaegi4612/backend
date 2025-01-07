@@ -9,6 +9,26 @@ import java.util.Scanner;
 *       - 콘솔 입력 사용
 *
 ** */
+//public class Test3{
+//    Public static void main(String[] args){
+//    //조건문 연습
+//        flowcontrol1();
+//        //반복문 연습
+//}
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
 public class Test3 {
     public static void main(String[] args) {
         //조건문 연습
