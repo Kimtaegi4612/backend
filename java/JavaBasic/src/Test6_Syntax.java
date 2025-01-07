@@ -38,6 +38,6 @@ public class Test6_Syntax {
         System.out.println(score1);
         System.out.println(score3);
         // 메소드가 staic이라서 System.out.println(score2); non-static 사용 불가, 에러
-        
+
     }
 }
