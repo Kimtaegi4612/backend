@@ -1,4 +1,5 @@
-/*
+// 본 파일의 소속을 표현한 것 패키지 묘사
+package com.example.demo.basic;/*
 * 변수 문법
 * - Modifiers Type 변수
 *       - [] 생략 가능
@@ -13,7 +14,7 @@
 *   - 카멜 표기법
 *       - 소문자로 시작, 이어지는 글자 대문자, 다시 대문자
 *       - 알파벳시작. _시작 가능, 두번째부터 숫자 가능
-*       - 알파멧만 사용! (간단)ㅐ
+*       - 알파멧만 사용! (간단)
 * */
 
 public class Test6_Syntax {
@@ -64,6 +65,7 @@ public class Test6_Syntax {
     sum(int a, int b)
     { // 메소드명(parameters)//
             int c = a + b;
+
             ; //statements
             System.out.println(c); //statements
             //최소 버전: Js와 유사
