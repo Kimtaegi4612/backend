@@ -18,6 +18,26 @@ class DemoexApplicationTests {
     void contextLoads() {
         // 롬복 작동 테스트
        // new News();
+
+        // 빌더패턴
+        System.out.println("롬복 테스트");
+        News news = News.builder()
+                .title("스포츠 뉴스")
+                .content("토트넘 리버풀 경기")
+                .author("기자")
+                .build();
+
+        // 전체 데이터 출력
+        System.out.println(news.toString());
+
+        // 개별 데이터 출력
+        System.out.println(news.getAuthor());
+        System.out.println(news.getTitle());
+        System.out.println(news.getContent());
+
+        // 내용 변경 및 출력
+        news.setContent("3:6");
+        System.out.println(news.getContent());
     }
 
 }
